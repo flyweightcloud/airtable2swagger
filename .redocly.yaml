@@ -1,0 +1,4 @@
+lint:
+  rules:
+    operation-2xx-response:
+      severity: off

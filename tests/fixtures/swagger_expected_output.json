@@ -1,0 +1,600 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Airtable",
+    "description": "Custom Airtable Swagger file created programmatically from https://github.com/flyweightcloud/airtable2swagger",
+    "version": "1.0",
+    "license": {
+      "name": "MIT",
+      "url": "https://mit-license.org/"
+    },
+    "contact": {
+      "name": "Mark Percival",
+      "url": "https://flyweight.cloud",
+      "email": "mark@flyweight.cloud"
+    }
+  },
+  "host": "api.airtable.com",
+  "basePath": "/v0",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/app7Ns7bmcPNrCI3a/Inbound": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "records": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "RecordID"
+                      },
+                      "createdTime": {
+                        "type": "string",
+                        "description": "Record Created Time"
+                      },
+                      "fields": {
+                        "type": "object",
+                        "description": "Record Fields",
+                        "properties": {
+                          "Status": {
+                            "type": "string"
+                          },
+                          "Name": {
+                            "type": "string"
+                          },
+                          "Checkboxy": {
+                            "type": "boolean"
+                          },
+                          "CreatedOn": {
+                            "type": "string",
+                            "format": "date"
+                          },
+                          "Decimal": {
+                            "type": "number"
+                          },
+                          "Int": {
+                            "type": "integer"
+                          },
+                          "Monet": {
+                            "type": "integer"
+                          },
+                          "Notes": {
+                            "type": "string"
+                          },
+                          "CreatedBy": {
+                            "type": "string"
+                          },
+                          "CreatedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "Email": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "description": "Records"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filterByFormula",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "x-ms-visibility": "advanced",
+            "description": "A formula used to filter records.",
+            "x-ms-summary": "Formula filter"
+          },
+          {
+            "name": "maxRecords",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "x-ms-visibility": "advanced",
+            "description": "The maximum total number of records that will be returned in your requests.",
+            "x-ms-summary": "Maximum number of records."
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "x-ms-visibility": "advanced",
+            "description": "The number of records returned in each request. Must be less than or equal to 100.",
+            "x-ms-summary": "Page size per request"
+          },
+          {
+            "name": "view",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "x-ms-visibility": "advanced",
+            "description": "The name or ID of a view in the table. If set, only the records in that view will be returned.",
+            "x-ms-summary": "View"
+          },
+          {
+            "name": "cellFormat",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "x-ms-visibility": "advanced",
+            "description": "The format that should be used for cell values. Supported values are: json: cells will be formatted as JSON, depending on the field type. string: cells will be formatted as user-facing strings, regardless of the field type.",
+            "x-ms-summary": "Cell format"
+          },
+          {
+            "name": "timeZone",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "x-ms-visibility": "advanced",
+            "description": "The time zone that should be used to format dates when using string as the cellFormat. This parameter is required when using string as the cellFormat.",
+            "x-ms-summary": "Time zone"
+          },
+          {
+            "name": "userLocale",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "x-ms-visibility": "advanced",
+            "description": "The user locale that should be used to format dates when using string as the cellFormat. This parameter is required when using string as the cellFormat.",
+            "x-ms-summary": "User locale"
+          }
+        ],
+        "summary": "List Records",
+        "description": "List Records in table. Returned records do not include any fields with empty values. You can filter, sort, and format the results with the parameters.",
+        "operationId": "ListInbound"
+      },
+      "post": {
+        "responses": {
+          "199": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "RecordID"
+                },
+                "createdTime": {
+                  "type": "string",
+                  "description": "Record Created Time"
+                },
+                "fields": {
+                  "type": "object",
+                  "description": "Record Fields",
+                  "properties": {
+                    "Status": {
+                      "type": "string"
+                    },
+                    "Name": {
+                      "type": "string"
+                    },
+                    "Checkboxy": {
+                      "type": "boolean"
+                    },
+                    "CreatedOn": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "Decimal": {
+                      "type": "number"
+                    },
+                    "Int": {
+                      "type": "integer"
+                    },
+                    "Monet": {
+                      "type": "integer"
+                    },
+                    "Notes": {
+                      "type": "string"
+                    },
+                    "CreatedBy": {
+                      "type": "string"
+                    },
+                    "CreatedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "Email": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "Create a record",
+        "description": "Create a record in a table. JSON record needs to be passed.",
+        "operationId": "CreateInbound",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "default": "application/json",
+            "x-ms-visibility": "internal",
+            "description": "Content-Type for the body of the request. It is defaulted to JSON.",
+            "x-ms-summary": "Content-Type"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "records": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "fields": {
+                        "type": "object",
+                        "properties": {
+                          "Status": {
+                            "type": "string"
+                          },
+                          "Name": {
+                            "type": "string"
+                          },
+                          "Checkboxy": {
+                            "type": "boolean"
+                          },
+                          "CreatedOn": {
+                            "type": "string",
+                            "format": "date"
+                          },
+                          "Decimal": {
+                            "type": "number"
+                          },
+                          "Int": {
+                            "type": "integer"
+                          },
+                          "Monet": {
+                            "type": "integer"
+                          },
+                          "Notes": {
+                            "type": "string"
+                          },
+                          "CreatedBy": {
+                            "type": "string"
+                          },
+                          "CreatedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "Email": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "patch": {
+        "responses": {
+          "200": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "id"
+                },
+                "createdTime": {
+                  "type": "string",
+                  "description": "Record Created Time"
+                },
+                "fields": {
+                  "type": "object",
+                  "description": "Record Fields",
+                  "properties": {
+                    "Status": {
+                      "type": "string"
+                    },
+                    "Name": {
+                      "type": "string"
+                    },
+                    "Checkboxy": {
+                      "type": "boolean"
+                    },
+                    "CreatedOn": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "Decimal": {
+                      "type": "number"
+                    },
+                    "Int": {
+                      "type": "integer"
+                    },
+                    "Monet": {
+                      "type": "integer"
+                    },
+                    "Notes": {
+                      "type": "string"
+                    },
+                    "CreatedBy": {
+                      "type": "string"
+                    },
+                    "CreatedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "Email": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "Update a record",
+        "description": "Update a record in a table. It will only update the fields provided and leave the rest as they were.",
+        "operationId": "UpdateInbound",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": false,
+            "type": "string",
+            "description": "Content-Type for the body of the request. It is defaulted to JSON.",
+            "x-ms-summary": "Content-Type",
+            "x-ms-url-encoding": "single"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "records": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "fields": {
+                        "type": "object",
+                        "properties": {
+                          "Status": {
+                            "type": "string"
+                          },
+                          "Name": {
+                            "type": "string"
+                          },
+                          "Checkboxy": {
+                            "type": "boolean"
+                          },
+                          "CreatedOn": {
+                            "type": "string",
+                            "format": "date"
+                          },
+                          "Decimal": {
+                            "type": "number"
+                          },
+                          "Int": {
+                            "type": "integer"
+                          },
+                          "Monet": {
+                            "type": "integer"
+                          },
+                          "Notes": {
+                            "type": "string"
+                          },
+                          "CreatedBy": {
+                            "type": "string"
+                          },
+                          "CreatedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "Email": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/app7Ns7bmcPNrCI3a/Inbound/{RecordID}": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "RecordID"
+                },
+                "createdTime": {
+                  "type": "string",
+                  "description": "Record Created Time"
+                },
+                "fields": {
+                  "type": "object",
+                  "description": "Record Fields",
+                  "properties": {
+                    "Status": {
+                      "type": "string"
+                    },
+                    "Name": {
+                      "type": "string"
+                    },
+                    "Checkboxy": {
+                      "type": "boolean"
+                    },
+                    "CreatedOn": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "Decimal": {
+                      "type": "number"
+                    },
+                    "Int": {
+                      "type": "integer"
+                    },
+                    "Monet": {
+                      "type": "integer"
+                    },
+                    "Notes": {
+                      "type": "string"
+                    },
+                    "CreatedBy": {
+                      "type": "string"
+                    },
+                    "CreatedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "Email": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "RecordID",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "RecordID to be retrieved.",
+            "x-ms-summary": "RecordID",
+            "x-ms-url-encoding": "single"
+          }
+        ],
+        "summary": "Retrieve a record",
+        "description": "Retrieve a record in a table. Any empty fields (e.g. [], or false) in the record will not be returned.",
+        "operationId": "GetInbound"
+      },
+      "delete": {
+        "responses": {
+          "200": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "id"
+                },
+                "deleted": {
+                  "type": "boolean",
+                  "description": "deleted"
+                },
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "description": "type"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "message"
+                    }
+                  },
+                  "description": "error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Delete a record",
+        "description": "Delete a record in a table. Provide RecordID to select a record.",
+        "operationId": "DeleteInbound",
+        "parameters": [
+          {
+            "name": "RecordID",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "RecordID to be deleted.",
+            "x-ms-summary": "RecordID",
+            "x-ms-url-encoding": "single"
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "API Key": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "api_key"
+    }
+  },
+  "security": [
+    {
+      "API Key": []
+    }
+  ],
+  "tags": [],
+  "x-ms-connector-metadata": [
+    {
+      "propertyName": "Website",
+      "propertyValue": "https://airtable.com/"
+    },
+    {
+      "propertyName": "Privacy policy",
+      "propertyValue": "https://airtable.com/privacy"
+    },
+    {
+      "propertyName": "Categories",
+      "propertyValue": "Data"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "records": [
+    {
+      "id": "recPSlWAyAR3Rc3mp",
+      "fields": {
+        "Status": "Potential",
+        "Name": "Mark Percival",
+        "Checkboxy": true,
+        "CreatedOn": "2021-10-01",
+        "Decimal": 25.8,
+        "Int": -10,
+        "Monet": 87
+      },
+      "createdTime": "2021-09-27T15:44:10.000Z"
+    },
+    {
+      "id": "rec1AZfpuaNxVZnkb",
+      "fields": {
+        "Name": "Joe Elliot",
+        "Notes": "Lead singer of Def Leopard",
+        "Status": "Potential",
+        "CreatedBy": "Mark Percival",
+        "CreatedAt": "2021-10-15T20:45:00.000Z",
+        "Decimal": 9,
+        "Monet": 122,
+        "Int": 25
+      },
+      "createdTime": "2021-10-20T20:40:58.000Z"
+    },
+    {
+      "id": "recQ3pmegXTvARzB1",
+      "fields": {
+        "Notes": "Nameless User",
+        "Email": "nameless@gmail.com",
+        "Monet": -95
+      },
+      "createdTime": "2021-10-20T20:41:31.000Z"
+    }
+  ]
+}
