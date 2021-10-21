@@ -1,5 +1,5 @@
 {
-  "name": "airtable2swagger",
+  "name": "@flyweight.cloud/airtable2swagger",
   "version": "0.0.1",
   "description": "Quickly build airtable swagger definitions from just the API data",
   "main": "lib/index.js",

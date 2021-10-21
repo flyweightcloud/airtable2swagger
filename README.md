@@ -14,7 +14,7 @@ This seeks to resolve that issue.
 
 ## CLI Usage
 
-`npx @flyweightcloud/airtable2swagger https://api.airtable.com/v0/app7Ns7bmcPNrCI3a/Inbound?api_key=API_KEY  > swagger.json`
+`npx @flyweight.cloud/airtable2swagger https://api.airtable.com/v0/app7Ns7bmcPNrCI3a/Inbound?api_key=API_KEY  > swagger.json`
 
 ## Testing
 
