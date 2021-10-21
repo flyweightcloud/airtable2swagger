@@ -1,7 +1,10 @@
 import * as fs from "fs";
-import { buildPaths, extractFieldsFromRecord, extractFieldsFromRecords, Field, generateSwagger } from "../src/swagger";
-import base from "../src/swagger/base";
-import * as airtableRecords from "./fixtures/airtable_inbound.json";
+import * as path from "path";
+import { buildPaths, extractFieldsFromRecord, extractFieldsFromRecords, Field, generateSwagger } from "../../src/swagger";
+import * as airtableRecords from "../fixtures/airtable_inbound.json";
+
+const expectedSwaggerFile = path.join(__dirname, "../fixtures/swagger.json");
+const outSwaggerFile = path.join(__dirname, "../output/swagger_test_output.json");
 
 const getField = (fields: Field[], name: string): Field | undefined =>{
   return fields.find((field) => field.name === name);
@@ -38,8 +41,8 @@ describe("Swagger building", () => {
         const swaggerFields = extractFieldsFromRecords(airtableRecords.records);
         const paths = buildPaths({}, basePath, swaggerFields);
         const swagger = generateSwagger(paths);
-        fs.writeFileSync("./tests/output/swagger_test_output.json", JSON.stringify(swagger, null, 2));
-        const expected = JSON.parse(fs.readFileSync("./tests/fixtures/swagger_expected_output.json", "utf-8"));
+        fs.writeFileSync(outSwaggerFile, JSON.stringify(swagger, null, 2));
+        const expected = JSON.parse(fs.readFileSync(expectedSwaggerFile, "utf-8"));
         expect(swagger).toEqual(expected);
     });
 });
