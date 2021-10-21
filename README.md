@@ -1,3 +1,7 @@
+![Flyweight Cloud_2_cropped_800](https://user-images.githubusercontent.com/2868/138356564-5747e68e-4df9-46db-8a77-bc48b3c711d7.png)
+
+
+
 # Flyweight Airtable2Swagger
 [![Tests](https://github.com/flyweightcloud/airtable2swagger/actions/workflows/test.yml/badge.svg)](https://github.com/flyweightcloud/airtable2swagger/actions/workflows/test.yml)
 
