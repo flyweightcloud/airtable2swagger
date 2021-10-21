@@ -5,8 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "rimraf lib && tsc",
-    "lint": "tslint src/**/*.ts tests/**/*.ts -e \"tests/DemoFunc/node_modules/**/*\" ",
-    "lint:fix": "tslint src/**/*.ts tests/**/*.ts -e \"tests/DemoFunc/node_modules/**/*\" --fix",
+    "lint": "tslint \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "lint:fix": "tslint \"src/**/*.ts\" \"tests/**/*.ts\" --fix",
     "lint:openapi": "openapi lint tests/output/swagger_test_output.json",
     "test": "jest --config jestconfig.json",
     "deploy": "npm run lint && npm run build && npm publish --access public"
