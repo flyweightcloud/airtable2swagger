@@ -1,12 +1,13 @@
 {
   "name": "@flyweight.cloud/airtable2swagger",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Quickly build airtable swagger definitions from just the API data",
   "main": "lib/index.js",
   "homepage": "https://github.com/flyweightcloud/airtable2swagger",
   "repository": "https://github.com/flyweightcloud/airtable2swagger.git",
   "bin": "lib/cli.js",
   "exports": {
+    ".": "./lib/index.js",
     "./swagger": "./lib/swagger/",
     "./lib/swagger": "./lib/swagger/"
   },
