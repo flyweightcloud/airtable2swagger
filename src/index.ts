@@ -1,3 +1,4 @@
+import * as swaggerBuilder from './swagger';
 export interface AirtableRecord {
   id: string
   createdTime: string
@@ -5,3 +6,5 @@ export interface AirtableRecord {
     [key: string]: any,
   }
 }
+
+export const swagger = swaggerBuilder;
