@@ -1,8 +1,13 @@
-export default (paths: any): object => {
+export interface Opts {
+  title?: string
+}
+
+export default (paths: any, opts?: Opts): object => {
+  opts = opts || {};
   return ({
     "swagger": "2.0",
     "info": {
-      "title": "Airtable",
+      "title": opts.title || "Airtable",
       "description": "Custom Airtable Swagger file created programmatically from https://github.com/flyweightcloud/airtable2swagger",
       "version": "1.0",
       "license": {
