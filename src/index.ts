@@ -1,4 +1,4 @@
-import * as swaggerBuilder from './swagger';
+import * as swaggerBuilder from "./swagger";
 export interface AirtableRecord {
   id: string
   createdTime: string
